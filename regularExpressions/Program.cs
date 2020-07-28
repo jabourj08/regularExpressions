@@ -114,7 +114,8 @@ namespace regularExpressions
 
             while (!correct)
             {
-                if (Regex.IsMatch(name, @"^([A-Z][A-z]{1,29})$"))
+                if (Regex.IsMatch(name, @"([A-Z])\w+\s[A-Z]\w{0,29}")) 
+                //if (Regex.IsMatch(name, @"^([A-Z][A-z]{1,29})$"))
                 {
                     Console.WriteLine($"Huzzah! \"{name}\" is in the correct format!");
                     correct = true;
